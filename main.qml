@@ -7,22 +7,26 @@ ApplicationWindow {
     visible: true
     title: "Rock-Paper-Scissors"
 
+    property var winCount: 0
+    property var losCount: 0
+
     SwipeView{
         id: swipeView
         anchors.fill: parent
         currentIndex: 0
+        interactive: false
 
-        Item{
+        Home_Page{
             id: home_page
             width: 360
             height: 640
         }
-        Item{
+        Game_Page{
             id: game_page
             width: 360
             height: 640
         }
-        Item{
+        End_Page{
             id: end_page
             width: 360
             height: 640
